@@ -73,18 +73,13 @@ body{
     height: 50px;
     position: relative;
     top: 274px;
+    left: 35px;
 }
 #skate{
     margin-left: 1px;
     width: 50px;
     height: 50px;
     margin-top: 16px;
-}
-.animate{
-    animation: jump 500ms;
-}
-.animateFlip{
-    animation: flip ease-in-out .5s;
 }
 @keyframes jump {
     0%,100%{
@@ -99,6 +94,9 @@ body{
     80%{
         transform:rotateZ(15deg);
     }
+}
+.animate{
+    animation: jump 500ms;
 }
 @keyframes flip {
     0%,100%{
@@ -122,6 +120,67 @@ body{
     80%{
         transform:rotateZ(15deg);
     }
+}
+.animateFlip{
+    animation: flip ease-in-out .5s;
+}
+@keyframes varial {
+    0%,100%{
+        top: 274px;
+    }
+    10%{
+        transform:rotateZ(-50deg);
+    }
+    35%{
+        transform: rotateY(45deg);
+    }
+    45%{
+        transform: rotateY(90deg);
+    }
+    30%,70%{
+        top: 180px;
+    }
+    60%{
+        transform: rotateY(100deg);
+    }
+    75%{
+        transform: rotateY(180deg);
+    }
+    80%{
+        transform:rotateZ(15deg);
+    }
+}
+.animateVarial{
+    animation: shov ease-in-out .5s ;
+}
+@keyframes shov {
+    0%,100%{
+        top: 274px;
+    }
+    10%{
+        transform:rotateZ(-50deg);
+    }
+    35%{
+        transform: rotateY(-45deg);
+    }
+    45%{
+        transform: rotateY(-90deg);
+    }
+    30%,70%{
+        top: 180px;
+    }
+    60%{
+        transform: rotateY(-100deg);
+    }
+    75%{
+        transform: rotateY(-180deg);
+    }
+    80%{
+        transform:rotateZ(15deg);
+    }
+}
+.animateShov{
+    animation: varial ease-in-out .5s ;
 }
 #block{
     position: relative;

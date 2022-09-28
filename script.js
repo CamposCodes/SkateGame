@@ -25,6 +25,23 @@ function flip(){
     },500);
 }
 
+function varial(){
+    if(character.classList != 'animateVarial'){
+        character.classList.add('animateVarial');
+    }
+    setTimeout(function(){
+        character.classList.remove('animateVarial');
+    },500);
+}
+function shoveit(){
+    if(character.classList != 'animateShov'){
+        character.classList.add('animateShov');
+    }
+    setTimeout(function(){
+        character.classList.remove('animateShov');
+    },500);
+}
+
 
 
 let checkDead = setInterval(function(){
@@ -61,8 +78,8 @@ bgSkatepark.addEventListener('click', ()=>{
 // ESPAÇO PARA CHARACTER PULAR
 window.addEventListener('keyup', function(e) {
     var codigoTecla = e.which || e.keyCode || 0;
-    var space = codigoTecla == 32;
-    if (space) {
+    var ArrowDown = codigoTecla == 40;
+    if (ArrowDown) {
         jump();
     }
   });
@@ -71,5 +88,19 @@ window.addEventListener('keyup', function(e) {
     var arrowUp = codigoTecla == 38;
     if (arrowUp) {
         flip();
+    }
+  });
+window.addEventListener('keyup', function(e) {
+    var codigoTecla = e.which || e.keyCode || 0;
+    var ArrowRight = codigoTecla == 39;
+    if (ArrowRight) {
+        varial();
+    }
+  });
+window.addEventListener('keyup', function(e) {
+    var codigoTecla = e.which || e.keyCode || 0;
+    var ArrowLeft = codigoTecla == 37;
+    if (ArrowLeft) {
+        shoveit();
     }
   });
