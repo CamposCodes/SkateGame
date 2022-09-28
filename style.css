@@ -83,6 +83,9 @@ body{
 .animate{
     animation: jump 500ms;
 }
+.animateFlip{
+    animation: flip ease-in-out .5s;
+}
 @keyframes jump {
     0%,100%{
         top: 274px;
@@ -92,6 +95,29 @@ body{
     }
     30%,70%{
         top: 180px;
+    }
+    80%{
+        transform:rotateZ(15deg);
+    }
+}
+@keyframes flip {
+    0%,100%{
+        top: 274px;
+    }
+    10%{
+        transform:rotateZ(-50deg);
+    }
+    15%{
+        transform: rotateX(45deg);
+    }
+    40%{
+        transform: rotateX(90deg);
+    }
+    30%,70%{
+        top: 180px;
+    }
+    60%{
+        transform: rotateX(180deg);
     }
     80%{
         transform:rotateZ(15deg);

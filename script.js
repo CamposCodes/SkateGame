@@ -16,6 +16,14 @@ function start(){
     }
 }
 
+function flip(){
+    if(character.classList != 'animateFlip'){
+        character.classList.add('animateFlip');
+    }
+    setTimeout(function(){
+        character.classList.remove('animateFlip');
+    },500);
+}
 
 
 
@@ -56,5 +64,12 @@ window.addEventListener('keyup', function(e) {
     var space = codigoTecla == 32;
     if (space) {
         jump();
+    }
+  });
+window.addEventListener('keyup', function(e) {
+    var codigoTecla = e.which || e.keyCode || 0;
+    var arrowUp = codigoTecla == 38;
+    if (arrowUp) {
+        flip();
     }
   });
