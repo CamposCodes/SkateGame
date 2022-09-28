@@ -2,6 +2,14 @@ let character = document.querySelector('#character');
 let block = document.querySelector('#block');
 let startButton = document.querySelector('.start');
 
+let score = 0;
+
+function start(){
+    if(block.classList != 'animateStart'){
+        block.classList.add('animateStart');
+    }
+}
+
 function jump(){
     if(character.classList != 'animate'){
         character.classList.add('animate');
@@ -9,11 +17,6 @@ function jump(){
     setTimeout(function(){
         character.classList.remove('animate');
     },500);
-}
-function start(){
-    if(block.classList != 'animateStart'){
-        block.classList.add('animateStart');
-    }
 }
 
 function flip(){
@@ -42,8 +45,6 @@ function shoveit(){
     },500);
 }
 
-
-
 let checkDead = setInterval(function(){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
@@ -63,7 +64,9 @@ startButton.addEventListener('click', start);
 let bgHome = document.querySelector('#home');
 let bgCity = document.querySelector('#city');
 let bgSkatepark = document.querySelector('#skatepark');
-let game = document.querySelector('#game')
+let game = document.querySelector('#game');
+let localScore = document.querySelector('#score-local');
+
 
 bgHome.addEventListener('click', ()=>{
     game.style.background = 'var(--bgcolorh)';
@@ -81,13 +84,17 @@ window.addEventListener('keyup', function(e) {
     var ArrowDown = codigoTecla == 40;
     if (ArrowDown) {
         jump();
+        score += 10;
+        localScore.innerHTML = score;
     }
-  });
+});
 window.addEventListener('keyup', function(e) {
     var codigoTecla = e.which || e.keyCode || 0;
     var arrowUp = codigoTecla == 38;
     if (arrowUp) {
         flip();
+        score += 30;
+        localScore.innerHTML = score;
     }
   });
 window.addEventListener('keyup', function(e) {
@@ -95,12 +102,18 @@ window.addEventListener('keyup', function(e) {
     var ArrowRight = codigoTecla == 39;
     if (ArrowRight) {
         varial();
+        score += 20;
+        localScore.innerHTML = score;
     }
-  });
+});
 window.addEventListener('keyup', function(e) {
     var codigoTecla = e.which || e.keyCode || 0;
     var ArrowLeft = codigoTecla == 37;
     if (ArrowLeft) {
         shoveit();
+        score += 20;
+        localScore.innerHTML = score;
     }
   });
+
+  
