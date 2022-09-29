@@ -28,12 +28,12 @@ function flip(){
     },500);
 }
 
-function varial(){
-    if(character.classList != 'animateVarial'){
-        character.classList.add('animateVarial');
+function nollie(){
+    if(character.classList != 'animateNollie'){
+        character.classList.add('animateNollie');
     }
     setTimeout(function(){
-        character.classList.remove('animateVarial');
+        character.classList.remove('animateNollie');
     },500);
 }
 function shoveit(){
@@ -49,7 +49,7 @@ let checkDead = setInterval(function(){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
     
-    if(blockLeft < 20 && blockLeft > 0 && characterTop >= 200){
+    if(blockLeft < 70 && blockLeft > 0 && characterTop >= 200){
         block.style.animation = 'none';
         block.style.display = 'none';
         alert('LOSE!')
@@ -101,8 +101,8 @@ window.addEventListener('keyup', function(e) {
     var codigoTecla = e.which || e.keyCode || 0;
     var ArrowRight = codigoTecla == 39;
     if (ArrowRight) {
-        varial();
-        score += 20;
+        nollie();
+        score += 15;
         localScore.innerHTML = score;
     }
 });

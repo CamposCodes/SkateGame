@@ -127,34 +127,24 @@ body{
 .animateFlip{
     animation: flip ease-in-out .5s;
 }
-@keyframes varial {
+@keyframes nollie {
     0%,100%{
         top: 274px;
+        transform:rotateZ(0deg);
     }
     10%{
-        transform:rotateZ(-50deg);
+        transform:rotateZ(50deg);
     }
-    35%{
-        transform: rotateY(45deg);
-    }
-    45%{
-        transform: rotateY(90deg);
-    }
-    30%,70%{
+    70%,30%{
         top: 180px;
     }
-    60%{
-        transform: rotateY(100deg);
-    }
-    75%{
-        transform: rotateY(180deg);
-    }
     80%{
-        transform:rotateZ(15deg);
+        transform:rotateZ(-30deg);
     }
+
 }
-.animateVarial{
-    animation: shov ease-in-out .5s ;
+.animateNollie{
+    animation: nollie ease-in-out .5s ;
 }
 @keyframes shov {
     0%,100%{
@@ -183,7 +173,7 @@ body{
     }
 }
 .animateShov{
-    animation: varial ease-in-out .5s ;
+    animation: shov ease-in-out .5s ;
 }
 #block{
     position: relative;
