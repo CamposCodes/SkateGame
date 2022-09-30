@@ -68,6 +68,11 @@ let bgSkatepark = document.querySelector('#skatepark');
 let game = document.querySelector('#game');
 let localScore = document.querySelector('#score-local');
 
+let dotFlip = document.getElementById('dot-flip') ;
+let dotOllie = document.getElementById('dot-ollie');
+let dotNollie = document.getElementById('dot-nollie');
+let dotShov = document.getElementById('dot-shov');
+
 
 bgHome.addEventListener('click', ()=>{
     game.style.background = 'var(--bgcolorh)';
@@ -85,6 +90,10 @@ window.addEventListener('keyup', function(e) {
     var ArrowDown = codigoTecla == 40;
     if (ArrowDown) {
         jump();
+        dotOllie.style.background = 'var(--bgcolorh)';
+        setTimeout(function(){
+            dotOllie.style.background = 'var(--color1)';
+        },500);
         scoreUpdate(10);
     }
 });
@@ -93,6 +102,10 @@ window.addEventListener('keyup', function(e) {
     var arrowUp = codigoTecla == 38;
     if (arrowUp) {
         flip();
+        dotFlip.style.background = 'var(--bgcolorh)';
+        setTimeout(function(){
+            dotFlip.style.background = 'var(--color1)';
+        },500);
         scoreUpdate(30);
     }
   });
@@ -101,6 +114,10 @@ window.addEventListener('keyup', function(e) {
     var ArrowRight = codigoTecla == 39;
     if (ArrowRight) {
         nollie();
+        dotNollie.style.background = 'var(--bgcolorh)';
+        setTimeout(function(){
+            dotNollie.style.background = 'var(--color1)';
+        },500);
         scoreUpdate(15);
     }
 });
@@ -109,6 +126,10 @@ window.addEventListener('keyup', function(e) {
     var ArrowLeft = codigoTecla == 37;
     if (ArrowLeft) {
         shoveit();
+        dotShov.style.background = 'var(--bgcolorh)';
+        setTimeout(function(){
+            dotShov.style.background = 'var(--color1)';
+        },500);
         scoreUpdate(20);
     }
   });
