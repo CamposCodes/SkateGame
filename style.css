@@ -124,7 +124,7 @@ body{
     }
 }
 .animateFlip{
-    animation: flip ease-in-out .5s;
+    animation: flip ease-in-out 500ms;
 }
 @keyframes nollie {
     0%,100%{
@@ -143,7 +143,7 @@ body{
 
 }
 .animateNollie{
-    animation: nollie ease-in-out .5s ;
+    animation: nollie ease-in-out 500ms ;
 }
 @keyframes shov {
     0%,100%{
@@ -172,7 +172,7 @@ body{
     }
 }
 .animateShov{
-    animation: shov ease-in-out .5s ;
+    animation: shov ease-in-out 500ms ;
 }
 #block{
     position: relative;

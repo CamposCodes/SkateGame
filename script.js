@@ -45,11 +45,12 @@ function shoveit(){
     },500);
 }
 
+
 let checkDead = setInterval(function(){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
     
-    if(blockLeft < 70 && blockLeft > 0 && characterTop >= 200){
+    if(blockLeft < 70 && blockLeft > 0 && characterTop >= 248){
         block.style.animation = 'none';
         block.style.display = 'none';
         alert('LOSE!')
@@ -84,8 +85,7 @@ window.addEventListener('keyup', function(e) {
     var ArrowDown = codigoTecla == 40;
     if (ArrowDown) {
         jump();
-        score += 10;
-        localScore.innerHTML = score;
+        scoreUpdate(10);
     }
 });
 window.addEventListener('keyup', function(e) {
@@ -93,8 +93,7 @@ window.addEventListener('keyup', function(e) {
     var arrowUp = codigoTecla == 38;
     if (arrowUp) {
         flip();
-        score += 30;
-        localScore.innerHTML = score;
+        scoreUpdate(30);
     }
   });
 window.addEventListener('keyup', function(e) {
@@ -102,8 +101,7 @@ window.addEventListener('keyup', function(e) {
     var ArrowRight = codigoTecla == 39;
     if (ArrowRight) {
         nollie();
-        score += 15;
-        localScore.innerHTML = score;
+        scoreUpdate(15);
     }
 });
 window.addEventListener('keyup', function(e) {
@@ -111,9 +109,16 @@ window.addEventListener('keyup', function(e) {
     var ArrowLeft = codigoTecla == 37;
     if (ArrowLeft) {
         shoveit();
-        score += 20;
-        localScore.innerHTML = score;
+        scoreUpdate(20);
     }
   });
 
   
+
+function scoreUpdate(value){
+    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
+    if(blockLeft < 600){
+        score += value;
+        localScore.innerHTML = score;
+    }
+}
