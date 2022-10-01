@@ -222,7 +222,6 @@ button:hover{
     width: 800px;
     display: flex;
     justify-content: flex-start;
-    margin-top: 3rem;
 }
 
 .score{
@@ -277,4 +276,16 @@ button:hover{
 
 .dots-down{
     display: flex;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.options p{
+    color: var(--color1);
+    text-shadow: 2px 2px 2px #000;
 }

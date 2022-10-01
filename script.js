@@ -9,6 +9,13 @@ function start(){
         block.classList.add('animateStart');
     }
 }
+window.addEventListener('keyup', function(e) {
+    var codigoTecla = e.which || e.keyCode || 0;
+    var space = codigoTecla == 32;
+    if(space){
+        start();
+    }
+});
 
 function jump(){
     if(character.classList != 'animate'){
@@ -84,7 +91,7 @@ bgSkatepark.addEventListener('click', ()=>{
     game.style.background = 'var(--color4)';
 });
 
-// ESPAÇO PARA CHARACTER PULAR
+// teclas para manobra
 window.addEventListener('keyup', function(e) {
     var codigoTecla = e.which || e.keyCode || 0;
     var ArrowDown = codigoTecla == 40;
@@ -143,3 +150,14 @@ function scoreUpdate(value){
         localScore.innerHTML = score;
     }
 }
+
+let checkTrocaObstaculo = setInterval(function(){
+    let obst1 = document.querySelector('#obst1');
+    if(score > 300){
+        obst1.src = './media/obst3.png';
+    }
+    if(score > 500){
+        obst1.src = './media/obst2.png';
+    }
+
+},10);
