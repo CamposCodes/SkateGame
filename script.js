@@ -56,12 +56,20 @@ function shoveit(){
 let checkDead = setInterval(function(){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
-    
-    if(blockLeft < 70 && blockLeft > 0 && characterTop >= 248){
-        block.style.animation = 'none';
-        block.style.display = 'none';
-        alert('LOSE!')
-        location.reload();
+    let obst1 = document.querySelector('#obst1');
+
+    if(score > 1000 && score < 2000){
+        if(blockLeft < 70 && blockLeft > 0 && characterTop >= 248){
+            scoreUpdate(100);
+        }
+    } 
+    else{
+        if(blockLeft < 70 && blockLeft > 0 && characterTop >= 248){
+            block.style.animation = 'none';
+            block.style.display = 'none';
+            alert('LOSE!')
+            location.reload();
+        }
     }
 },10);
 
@@ -90,6 +98,7 @@ bgCity.addEventListener('click', ()=>{
 bgSkatepark.addEventListener('click', ()=>{
     game.style.background = 'var(--color4)';
 });
+
 
 // teclas para manobra
 window.addEventListener('keyup', function(e) {
@@ -158,6 +167,12 @@ let checkTrocaObstaculo = setInterval(function(){
     }
     if(score > 500){
         obst1.src = './media/obst2.png';
+    }
+    if(score > 1000){
+        obst1.src = './media/coin.png';
+    }
+    if(score > 2000){
+        obst1.src = './media/obst5.png';
     }
 
 },10);
