@@ -12,8 +12,6 @@
 
 #### Sua missão é guiar o skate por esse caminho, pulando obstáculos e realizando manobras radicais para acumular pontos. Cada vez que você ultrapassa um obstáculo com sucesso e executa uma manobra, sua pontuação aumenta. As manobras disponíveis são:
 
-<br>
-
 -   #### Seta para a direita: Nollie
 -   #### Seta para a esquerda: Shove-it
 -   #### Seta para cima: Flip
@@ -23,11 +21,11 @@
 
 #### Você pode realizar essas manobras usando as setas do teclado ou os botões na tela, proporcionando uma experiência de jogo intuitiva e divertida.
 
-<br>
+>
 
 #### Fique atento aos obstáculos durante a sua jornada e calcule seus movimentos com precisão para evitar colisões. Se você esbarrar em um obstáculo, o jogo será encerrado.
 
-<br>
+
 
 #### Não perca tempo e mostre suas habilidades no skate neste envolvente jogo! Acesse o link abaixo para começar a jogar:
 
