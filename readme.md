@@ -4,7 +4,7 @@
 
 <br>
 
-> ### O Skate Game é um jogo desenvolvido como uma iniciativa pessoal para praticar e aprimorar meus conhecimentos em HTML, CSS e JavaScript (explorando principalmente animações). Neste jogo, você embarcará em uma emocionante jornada de skate em um caminho infinito, repleto de obstáculos desafiadores.
+> ### <span style="color: #1656E1;">Texto em vermelho</span>O Skate Game é um jogo desenvolvido como uma iniciativa pessoal para praticar e aprimorar meus conhecimentos em HTML, CSS e JavaScript (explorando principalmente animações). Neste jogo, você embarcará em uma emocionante jornada de skate em um caminho infinito, repleto de obstáculos desafiadores.</span>
 
 >
 
