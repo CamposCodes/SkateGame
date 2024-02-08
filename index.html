@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Skate Game</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
-</head>
-<body>
-    <div class="all-dots">
-        <div id="dot-flip" class="dot">flip</div>
-        <div class="dots-down">
-            <div id="dot-shov" class="dot">shove-it</div>
-            <div id="dot-ollie" class="dot">ollie</div>
-            <div id="dot-nollie" class="dot">nollie</div>
-        </div>
-    </div>
+  </head>
+  <body>
     <div class="container">
-        <h1>Skate Game</h1>
-        <div class="score">
-            <p>Score :
-                <span id="score-local">0</span> pontos
-            </p>
+      <h1>Skate Game</h1>
+      <div class="score">
+        <p>Score : <span id="score-local">0</span> pontos</p>
+      </div>
+      <div id="game">
+        <div id="character">
+          <img id="skate" src="./media/skate.png" alt="Skateboard" />
         </div>
-        <div id="game">
-            <div id="character"><img id="skate" src="./media/skate.png" alt=""></div>
-            <div id="block"><img id="obst1" src="./media/obst1.png" alt=""></div>
+        <div id="block">
+          <img id="obst1" src="./media/obst1.png" alt="Obstacle 1" />
         </div>
-        
-        <!-- <div class="lose-screen">
-            <p>You Lose!</p>
-        </div> -->
+      </div>
 
-        <div class="options">
-            <p>press space to start</p>
-            <div class="ambience-options">
-                <button class="start" >Start</button>
-                <button id="home" >Home</button>
-                <button id="city" >City</button>
-                <button id="skatepark" >Park</button>
+      <!-- <div class="lose-screen">
+      <p>You Lose!</p>
+    </div> -->
+
+      <div class="options">
+        <p>Press space to start</p>
+        <div class="ambience-options">
+          <button class="start">Start</button>
+          <button id="home">Home</button>
+          <button id="city">City</button>
+          <button id="skatepark">Park</button>
+          <button onclick="toggleAudio()">Music</button>
+          <div class="all-dots">
+            <div id="dot-flip" class="dot">flip</div>
+            <div class="dots-down">
+              <div id="dot-shov" class="dot">shove-it</div>
+              <div id="dot-ollie" class="dot">ollie</div>
+              <div id="dot-nollie" class="dot">nollie</div>
             </div>
+          </div>
+          <audio id="myAudio" loop>
+            <source src="./media/music.mp3" type="audio/mpeg" />
+            Seu navegador não suporta a tag de áudio HTML5.
+          </audio>
         </div>
+      </div>
 
-        <footer>
-        </footer>
+      <footer></footer>
     </div>
-
-    
-</body>
+  </body>
 </html>
