@@ -65,7 +65,7 @@ body {
   border-radius: 10px;
   width: 800px;
   height: 320px;
-  border-bottom: 3px dotted black;
+  border-bottom: 3px dotted rgb(255, 255, 255);
   animation: road 0.5s infinite linear;
   transition: 0.2s;
   background: var(--bgcolorh);
@@ -74,10 +74,10 @@ body {
 @keyframes road {
   0%,
   100% {
-    border-bottom: 3px dotted black;
+    border-bottom: 3px dotted rgb(56, 52, 52);
   }
   50% {
-    border-bottom: 3px dotted #ffea53;
+    border-bottom: 3px dotted #ff0808;
   }
 }
 
@@ -273,7 +273,7 @@ button:hover {
 /* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
 
 .all-dots {
-  background-color: #000;
+  background: var(--bgcolorh);
   padding: 1rem;
   border-radius: 2rem;
   display: flex;
@@ -312,6 +312,7 @@ button:hover {
 }
 
 .options {
+  margin-left: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
